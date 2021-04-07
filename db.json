@@ -1,0 +1,24 @@
+{
+  "contacts": [
+    {
+      "id": 1,
+      "name": "name_1",
+      "number": "79787382145"
+    },
+    {
+      "id": 2,
+      "name": "name_1",
+      "number": "79787382146"
+    },
+    {
+      "id": 3,
+      "name": "name_3",
+      "number": "79787382178"
+    },
+    {
+      "name": "gfmfhm",
+      "number": "79787382145",
+      "id": 4
+    }
+  ]
+}
