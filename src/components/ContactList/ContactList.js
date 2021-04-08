@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import PropTypes from "prop-types";
 import { connect } from "react-redux";
 import contactsOperations from "../../redux/contacts/contacts-operations";
+import contactsSelectors from "../../redux/contacts/contacts-selectors";
 
 import s from "./ContactList.module.css";
 
@@ -38,17 +39,11 @@ class ContactList extends Component {
   }
 }
 
-//функция фильтрации контактов
-const filterContacts = (contacts, filter) => {
-  const normFilter = filter.toLowerCase();
-  return contacts.filter((contact) =>
-    contact.name.toLowerCase().includes(normFilter)
-  );
-};
+const { getIsLoading, getFilteredContacts } = contactsSelectors;
 
-const mapStateToProps = ({ contacts: { items, filter, loading } }) => ({
-  isLaodingContacts: loading,
-  contactList: filterContacts(items, filter),
+const mapStateToProps = (state) => ({
+  isLaodingContacts: getIsLoading(state),
+  contactList: getFilteredContacts(state),
 });
 
 const mapDispatchToProps = (dispatch) => ({
