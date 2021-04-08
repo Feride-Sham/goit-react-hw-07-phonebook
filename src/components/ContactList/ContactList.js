@@ -15,22 +15,25 @@ class ContactList extends Component {
   }
 
   render() {
-    const { contactList, onDeleteContact } = this.props;
+    const { contactList, onDeleteContact, isLaodingContacts } = this.props;
     return (
-      <ul>
-        {contactList.map(({ id, name, number }) => (
-          <li className={s.item} key={id}>
-            <p>{name}: </p> <p>{number}</p>
-            <button
-              className={s.btn}
-              type="button"
-              onClick={() => onDeleteContact(id)}
-            >
-              Delete
-            </button>
-          </li>
-        ))}
-      </ul>
+      <>
+        {isLaodingContacts && <h1>Загружаем..</h1>}
+        <ul>
+          {contactList.map(({ id, name, number }) => (
+            <li className={s.item} key={id}>
+              <p>{name}: </p> <p>{number}</p>
+              <button
+                className={s.btn}
+                type="button"
+                onClick={() => onDeleteContact(id)}
+              >
+                Delete
+              </button>
+            </li>
+          ))}
+        </ul>
+      </>
     );
   }
 }
@@ -43,7 +46,8 @@ const filterContacts = (contacts, filter) => {
   );
 };
 
-const mapStateToProps = ({ contacts: { items, filter } }) => ({
+const mapStateToProps = ({ contacts: { items, filter, loading } }) => ({
+  isLaodingContacts: loading,
   contactList: filterContacts(items, filter),
 });
 

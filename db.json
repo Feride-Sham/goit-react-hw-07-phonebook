@@ -1,54 +1,19 @@
 {
   "contacts": [
     {
-      "id": 1,
-      "name": "name_1",
-      "number": "79787382145"
+      "name": "Luna",
+      "number": "30955042034",
+      "id": 14
     },
     {
-      "id": 2,
-      "name": "name_1",
-      "number": "79787382146"
+      "name": "Alex",
+      "number": "380955042034",
+      "id": 15
     },
     {
-      "id": 3,
-      "name": "name_3",
-      "number": "79787382178"
-    },
-    {
-      "name": "gfmfhm",
+      "name": "Frank",
       "number": "79787382145",
-      "id": 4
-    },
-    {
-      "name": "ччптпап",
-      "number": "12345678912",
-      "id": 5
-    },
-    {
-      "name": "free",
-      "number": "14725836969",
-      "id": 6
-    },
-    {
-      "name": "dnkvjnf",
-      "number": "74185296332",
-      "id": 7
-    },
-    {
-      "name": "edrf",
-      "number": "12345678978",
-      "id": 8
-    },
-    {
-      "name": "bsdb",
-      "number": "1748523696",
-      "id": 9
-    },
-    {
-      "name": "afvbdfb",
-      "number": "353763157273",
-      "id": 10
+      "id": 16
     }
   ]
 }
