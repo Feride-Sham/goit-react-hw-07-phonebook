@@ -10,12 +10,10 @@ import {
   PURGE,
   REGISTER,
 } from "redux-persist";
+import { contactsReducer } from "./contacts";
 // import storage from "redux-persist/lib/storage";
 // import { combineReducers } from "redux";
 // import { composeWithDevTools } from "redux-devtools-extension";
-import contactsReducer from "./contacts/contacts-reducer";
-
-//  ****after
 
 const middleware = [
   ...getDefaultMiddleware({
@@ -34,12 +32,6 @@ const store = configureStore({
   devTools: process.env.NODE_ENV === "development",
 });
 // const persistor = persistStore(store);
-
-//  ****before
-// const rootReducer = combineReducers({
-//   contacts: contactsReducer,
-// });
-// const store = createStore(rootReducer, composeWithDevTools());
 
 // export default { store, persistor };
 export default store;
